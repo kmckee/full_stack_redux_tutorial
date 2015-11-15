@@ -121,6 +121,21 @@ describe('application logic', () => {
                 });
             });
         });
-
+        it('marks winner when just one entry left', () => {
+            const state = Immutable.fromJS({
+                vote: {
+                    pair: ['Trainspotting', '28 Days Later'],
+                    tally: {
+                        'Trainspotting': 4,
+                        '28 Days Later': 2
+                    }
+                },
+                entries: []
+            });
+            const nextState = next(state);
+            expect(nextState).to.eql(Immutable.fromJS({
+                winner: 'Trainspotting'
+            }));
+        });
     });
 });
