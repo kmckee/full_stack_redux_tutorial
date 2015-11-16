@@ -51,8 +51,9 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	console.log('I am alive!');
+	'use strict';
 
+	console.log('I am alive!');
 
 /***/ }
 /******/ ]);
