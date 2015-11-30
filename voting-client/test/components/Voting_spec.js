@@ -10,7 +10,7 @@ describe('Voting', () => {
 
         const buttons = scryRenderedDOMComponentsWithTag(component, 'button');
 
-        expect(buttons[0].textContent).to.equal('Trainspotting');
+        expect(buttons[0].textContent).to.equal('Trsainspotting');
         expect(buttons[1].textContent).to.equal('28 Days Later');
     });
 });
